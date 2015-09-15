@@ -7,4 +7,7 @@ by [Michael Hartl](http://www.michaelhartl.com/).
 
 p cool stuff
 
-Bookmark: [6.2.4](https://www.railstutorial.org/book/modeling_users#sec-format_validation)
+Bookmark: [6.3.4](https://www.railstutorial.org/book/)
+
+Read later:
+- [Enforcing password strength in Rails](http://lmgtfy.com/?q=rails+enforce+password+strength)
