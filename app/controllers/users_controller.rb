@@ -5,7 +5,12 @@ class UsersController < ApplicationController
   end
   
   def show
-    @user = User.find(params[:id])
+    if current_user
+      @user = User.find(params[:id])
+    else
+      flash[:warning] = "You must be logged in to view profile pages"
+      redirect_to login_path
+    end
   end
   
   def create
@@ -13,6 +18,7 @@ class UsersController < ApplicationController
     if @user.save
       # Handle a successful save.
       flash[:success] = "Welcome to the Sample App!"
+      log_in @user
       redirect_to @user
     else
       render 'new'
