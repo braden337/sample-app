@@ -20,9 +20,4 @@
       <%= debug(params) if Rails.env.development? %>
     </div>
   </body>
-  
-  <% if logged_in? %>
-    Welcome <%= current_user.name %>!
-    <% end %>
-  
 </html>
